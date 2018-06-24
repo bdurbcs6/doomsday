@@ -34,6 +34,13 @@ class App extends Component {
     this.setState({ list });
   }
 
+  removeCompleted = e => {
+    e.preventDefault();
+    let list = this.state.list.slice();
+    list = list.filter(list => !list.completed);
+    this.setState({ list });
+  }
+
   render() {
     return (
       <div className="App">
@@ -41,6 +48,7 @@ class App extends Component {
         value={this.state.singleItem}
         updateSingleItem={this.updateSingleItem}
         addSingleItem={this.addSingleItem}
+        removeCompleted={this.removeCompleted}
         />
         <List
         list={this.state.list}

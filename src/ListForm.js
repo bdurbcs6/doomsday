@@ -11,6 +11,7 @@ const ListForm = props => {
       >
       </input>
       <button onClick={props.addSingleItem}>Add It!</button>
+      <button onClick={props.removeCompleted}>Got It</button>
     </form>
   )
 }
