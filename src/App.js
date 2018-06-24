@@ -16,10 +16,16 @@ class App extends Component {
           task: 'Bake Cookies',
           id: 1528817084358,
           completed: false
+        },
+        {
+          task: 'Bake Cookies',
+          id: 1528817084366,
+          completed: false
         }
       ]
     };
   };
+
   render() {
     return (
       <div className="App">

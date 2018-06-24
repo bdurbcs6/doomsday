@@ -1,9 +1,14 @@
 import React from 'react';
+import ListItem from './ListItem';
 
 const List = props => {
   return (
     <div>
-    Hello Zombies
+    {props.list.map(list => (
+      <ListItem
+      listItem={list}
+      />
+    ))}
     </div>
   )
 }
