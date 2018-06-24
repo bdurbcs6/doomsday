@@ -7,6 +7,7 @@ const List = props => {
     {props.list.map(list => (
       <ListItem
       listItem={list}
+      toggleSingleItem={props.toggleSingleItem}
       />
     ))}
     </div>
