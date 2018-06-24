@@ -1,34 +1,34 @@
 import React, { Component } from 'react';
 import List from './List';
+import ListForm from './ListForm';
 import './App.css';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      list: [
-        {
-          task: 'Organize Garage',
-          id: 1528817077286,
-          completed: false
-        },
-        {
-          task: 'Bake Cookies',
-          id: 1528817084358,
-          completed: false
-        },
-        {
-          task: 'Bake Cookies',
-          id: 1528817084366,
-          completed: false
-        }
-      ]
+      list: [],
+      singleItem: ''
     };
   };
+
+  updateSingleItem = e => this.setState({ singleItem : e.target.value });
+
+  addSingleItem = e => {
+    e.preventDefault();
+    const list = this.state.list.slice();
+    list.push({ task: this.state.singleItem, completed: false, id: Date.now() });
+    this.setState({ list, singleItem: '' })
+  }
 
   render() {
     return (
       <div className="App">
+        <ListForm
+        value={this.state.singleItem}
+        updateSingleItem={this.updateSingleItem}
+        addSingleItem={this.addSingleItem}
+        />
         <List
         list={this.state.list}
         />
