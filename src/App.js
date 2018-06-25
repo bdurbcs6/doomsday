@@ -45,7 +45,6 @@ class App extends Component {
     return (
       <div className="App">
         <h1>The Undead Are Coming!</h1>
-        <h3>Pack Your Bug Out Bag</h3>
         <ListForm
         value={this.state.singleItem}
         updateSingleItem={this.updateSingleItem}

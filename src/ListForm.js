@@ -6,7 +6,7 @@ const ListForm = props => {
       <input
         onChange={props.updateSingleItem}
         type="text"
-        placeholder="add item"
+        placeholder="Pack your bug out bag"
         value={props.value}
       >
       </input>
